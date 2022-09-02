@@ -50,6 +50,21 @@ if choose == "Gráficos":
     st.markdown(""" <style> .font {
     font-size:35px ; font-family: 'Cooper Black'; color:#A7F235;} 
     </style> """, unsafe_allow_html=True)
+    
+    
+    st.markdown('<p class="font">Energía</p>', unsafe_allow_html=True)
+    tab1, tab5= st.tabs(["Consumo de energía", "Consumo de energía por país"])
+    with tab1:
+        fig = tipoenerW()
+        st.plotly_chart(fig)
+    
+    with tab5:
+        fig5 = tipoenerB()
+        st.plotly_chart(fig5)
+
+
+
+    st.markdown("----")
 
     st.markdown('<p class="font">Emisiones</p>', unsafe_allow_html=True)
     tab6, tab7, tab2, tab3 = st.tabs(["Emisiones CO2 mayores", "Emisiones CO2 menores", "Tabla Mayor", "Tabla Menor"])
@@ -69,6 +84,7 @@ if choose == "Gráficos":
 
 
     st.markdown("----")
+    
     st.markdown('<p class="font">CO2</p>', unsafe_allow_html=True)
     tab4, tab5 = st.tabs(["Huella Ecologica vs Biocapacidad PerCap", "CO2 vs Temperatura"])
     with tab4:
@@ -79,21 +95,7 @@ if choose == "Gráficos":
         st.plotly_chart(fig7)
 
 
-    st.markdown("----")
 
-    st.markdown('<p class="font">Energía</p>', unsafe_allow_html=True)
-    tab1, tab5= st.tabs(["Consumo de energía", "Consumo de energía por país"])
-    with tab1:
-        fig = tipoenerW()
-        st.plotly_chart(fig)
-    
-    with tab5:
-        fig5 = tipoenerB()
-        st.plotly_chart(fig5)
-
-
-
-    st.markdown("----")
 
 
 
