@@ -40,6 +40,19 @@ if choose == "Inicio":
         st.image(logo1, width=500)
     with col2:
         st.image(logo, width=100)
+        
+    kpi1, kpi2, kpi3 = st.columns(3)
+    st.markdown('<p class="font">Principales indicadores</p>', unsafe_allow_html=True)
+    kpi1.metric(label = "Emisiones Globales CO2 Gt",
+                value=34.6,
+                delta = - 2)
+
+    kpi2.metric(label = "Huella Ecólogica Global hag",
+                value= 2.73,
+                delta = 0.03)
+    kpi3.metric(label = "Biocapacidad Global hag",
+                value= 1.52,
+                delta = 0.01)
 
     st.markdown('<p class="font">Emisiones de CO2 hoy</p>', unsafe_allow_html=True)
     #st.header("Emisiones de CO2 hoy")
