@@ -42,7 +42,6 @@ if choose == "Inicio":
         st.image(logo, width=100)
         
     kpi1, kpi2, kpi3 = st.columns(3)
-    st.markdown('<p class="font">Principales indicadores</p>', unsafe_allow_html=True)
     kpi1.metric(label = "Emisiones Globales CO2 Gt",
                 value=34.6,
                 delta = - 2)
