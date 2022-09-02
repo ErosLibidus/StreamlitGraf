@@ -67,21 +67,24 @@ if choose == "Gráficos":
     st.markdown("----")
 
     st.markdown('<p class="font">Emisiones</p>', unsafe_allow_html=True)
-    tab6, tab7, tab2, tab3 = st.tabs(["Emisiones CO2 mayores", "Emisiones CO2 menores", "Tabla Mayor", "Tabla Menor"])
+    tab6, tab3 = st.tabs(["Emisiones CO2 mayores", "Tabla Mayor"])
     with tab6:
         fig7 = emisionco2()
         st.plotly_chart(fig7)
+    with tab3:
+        df1 = emisionco_22()
+        st.table(df1)
+        
+        
+    st.markdown("----")
+    
+    tab7, tab2 = st.tabs(["Emisiones CO2 menores", "Tabla Menor"])
     with tab7:
         fig10 = co2Menos()
         st.plotly_chart(fig10)
     with tab2:
-        df1 = emisionco_22()
-        st.table(df1)
-    with tab3:
         df2 = co2menostab()
         st.table(df2)
-    
-
 
     st.markdown("----")
     
