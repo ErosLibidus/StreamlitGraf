@@ -76,7 +76,7 @@ if choose == "Gráficos":
         st.table(df1)
         
         
-    st.markdown("----")
+
     
     tab7, tab2 = st.tabs(["Emisiones CO2 menores", "Tabla Menor"])
     with tab7:
